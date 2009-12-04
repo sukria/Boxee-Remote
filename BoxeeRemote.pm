@@ -13,7 +13,11 @@ post '/action/:action' => sub {
     my $boxee = session('boxee');
     my $action = params->{action};
     $boxee->$action;
-    redirect '/remote';
+};
+
+post '/action_code/:code' => sub {
+    my $boxee = session('boxee');
+    $boxee->action(params->{code});
 };
 
 post '/connect' => sub { 

@@ -42,8 +42,16 @@ sub up    { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_UP}.')') }
 sub left  { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_LEFT}.')') }
 sub right { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_RIGHT}.')') }
 sub down  { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_DOWN}.')') }
-sub start { shift->send_command('SendKey('.$KEYS{ACTION_START}.')') }
-sub back  { shift->send_command('SendKey('.$KEYS{ACTION_BACK}.')') }
+sub button_a  { shift->send_command('SendKey('.$KEYS{ACTION_BUTTON_A}.')') }
+sub button_b  { shift->send_command('SendKey('.$KEYS{ACTION_BUTTON_b}.')') }
+
+sub start { shift->button_a }
+sub back  { shift->button_b }
+
+sub action {
+    my ($self, $code) = @_;
+    $self->send_command("SendKey($code)");
+}
 
 sub ping { 
     my ($self) = @_;

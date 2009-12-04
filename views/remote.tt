@@ -35,3 +35,6 @@ function send_action(action) {
 </div>
 
 <a href="#" onclick="send_action('back')">BACK</a>
+
+<br>
+TODO : PLAY/PAUSE VOLUME +/- 
