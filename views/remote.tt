@@ -1,0 +1,30 @@
+
+<div style="margin-bottom: 1em; font-size: 12px;">
+<div>
+    Host: <% session.boxee.server %>
+</div>
+<div>
+    Now playing: <% currently.Filename %>
+</div>
+</div>
+
+<div>
+<table border="0">
+    <tr>
+        <td></td>
+        <td><a href="">UP</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="">LEFT</a></td>
+        <td></td>
+        <td><a href="">RIGHT</a></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="">DOWN</a></td>
+        <td></td>
+    </tr>
+</table>
+</div>
+

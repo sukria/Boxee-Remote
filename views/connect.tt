@@ -1,0 +1,7 @@
+
+
+<form action="/connect" method="post">
+	<input type="text" name="server" /> : <input type="text" name="port" value="8800" size="4"/>
+	<input type="submit" value="connect" />
+</form>
+
