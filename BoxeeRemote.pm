@@ -9,7 +9,7 @@ get '/' => sub {
     template 'connect';
 };
 
-get '/action/:action' => sub {
+post '/action/:action' => sub {
     my $boxee = session('boxee');
     my $action = params->{action};
     $boxee->$action;
