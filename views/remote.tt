@@ -23,7 +23,7 @@ function send_action(action) {
     </tr>
     <tr>
         <td><a href="#" onclick="send_action('left');return(false);">LEFT</a></td>
-        <td></td>
+        <td><a href="#" onclick="send_action('start');return(false);">OK</a></td>
         <td><a href="#" onclick="send_action('right');return(false);">RIGHT</a></td>
     </tr>
     <tr>
@@ -34,3 +34,4 @@ function send_action(action) {
 </table>
 </div>
 
+<a href="#" onclick="send_action('back')">BACK</a>

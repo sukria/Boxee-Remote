@@ -36,13 +36,14 @@ sub send_http_request {
     }
 }
 
-sub exit { shift->send_command('Exit()') }
+sub exit  { shift->send_command('Exit()') }
 sub pause { shift->send_command('Pause()') }
-
-sub up { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_UP}.')') }
-sub left { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_LEFT}.')') }
+sub up    { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_UP}.')') }
+sub left  { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_LEFT}.')') }
 sub right { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_RIGHT}.')') }
-sub down { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_DOWN}.')') }
+sub down  { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_DOWN}.')') }
+sub start { shift->send_command('SendKey('.$KEYS{ACTION_START}.')') }
+sub back  { shift->send_command('SendKey('.$KEYS{ACTION_BACK}.')') }
 
 sub ping { 
     my ($self) = @_;
