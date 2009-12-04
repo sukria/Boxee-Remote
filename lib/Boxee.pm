@@ -3,6 +3,9 @@ package Boxee;
 use Coat;
 use LWP::UserAgent;
 use Dancer::Logger;
+use BoxeeKey;
+
+my %KEYS = %{ BoxeeKey->keys };
 
 has server => (isa => 'Str', is => 'ro', required => 1);
 has port   => (isa => 'Str', is => 'ro', required => 1, default => '8800');
@@ -21,6 +24,7 @@ sub send_http_request {
     my ($self, $server, $port, $path) = @_;
 
     my $url = "http://${server}:${port}${path}";
+    Dancer::Logger->debug("send_http_request: $url");
     my $req = HTTP::Request->new(GET => $url);
     my $res = LWP::UserAgent->new->request($req);
 

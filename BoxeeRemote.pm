@@ -9,6 +9,13 @@ get '/' => sub {
     template 'connect';
 };
 
+get '/action/:action' => sub {
+    my $boxee = session('boxee');
+    my $action = params->{action};
+    $boxee->$action;
+    redirect '/remote';
+};
+
 post '/connect' => sub { 
     my $boxee = Boxee->new(
         server => params->{server},
