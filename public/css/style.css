@@ -1,12 +1,10 @@
 body {
     font-family: Lucida,sans-serif;   
     color: #eee;
-    background-color: #1f1b1a;
+    background: #212121 url(/images/boxee_logo.png) no-repeat top right;
 }
 
 #content {
-    color: #000;
-    background-color: #eee;
     padding: 1em;
     margin: 1em;
     padding-top: 0.5em;

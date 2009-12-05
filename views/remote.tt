@@ -1,7 +1,25 @@
 <script type="text/javascript">
 function send_action(action) {
-	new Ajax.Request('/action/'+action);
+	$(action).src = '/images/'+action+'_highlight.png';
+	new Ajax.Request('/action/'+action, {
+		method: 'post',
+		onLoading: function() {
+			true;
+		},
+		onComplete: function() {
+			$(action).src = '/images/'+action+'.png';
+		}
+	});
 }
+
+Bind.init();
+
+Bind.bind('up', function() { send_action('up') } );
+Bind.bind('down', function() { send_action('down') } );
+Bind.bind('left', function() { send_action('left') } );
+Bind.bind('right', function() { send_action('right') } );
+Bind.bind('backspace', function() { send_action('back') } );
+Bind.bind('return', function() { send_action('start') } );
 
 </script>
 
@@ -18,23 +36,23 @@ function send_action(action) {
 <table border="0">
     <tr>
         <td></td>
-        <td><a href="#" onclick="send_action('up');return(false);">UP</a></td>
+        <td><a href="#" onclick="send_action('up');return(false);"><img id="up" src="/images/up.png" border="0" /></a></td>
         <td></td>
     </tr>
     <tr>
-        <td><a href="#" onclick="send_action('left');return(false);">LEFT</a></td>
-        <td><a href="#" onclick="send_action('start');return(false);">OK</a></td>
-        <td><a href="#" onclick="send_action('right');return(false);">RIGHT</a></td>
+        <td><a href="#" onclick="send_action('left');return(false);"><img id="left" src="/images/left.png" border="0" /></a></td>
+        <td><a href="#" onclick="send_action('start');return(false);"><img id="start" src="/images/start.png" border="0" /></a></td>
+        <td><a href="#" onclick="send_action('right');return(false);"><img id="right" src="/images/right.png" border="0" /></a></td>
     </tr>
     <tr>
         <td></td>
-        <td><a href="#" onclick="send_action('down');return(false);">DOWN</a></td>
+        <td><a href="#" onclick="send_action('down');return(false);"><img id="down" src="/images/down.png" border="0" /></a></td>
         <td></td>
     </tr>
 </table>
 </div>
 
-<a href="#" onclick="send_action('back')">BACK</a>
+<a href="#" onclick="send_action('back'); return(false);"><span id="back">BACK</span></a>
 
 <br>
 TODO : PLAY/PAUSE VOLUME +/- 
