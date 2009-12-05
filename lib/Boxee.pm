@@ -44,7 +44,12 @@ sub left  { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_LEFT}.')') }
 sub right { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_RIGHT}.')') }
 sub down  { shift->send_command('SendKey('.$KEYS{ACTION_MOVE_DOWN}.')') }
 sub button_a  { shift->send_command('SendKey('.$KEYS{ACTION_BUTTON_A}.')') }
-sub button_b  { shift->send_command('SendKey('.$KEYS{ACTION_BUTTON_b}.')') }
+sub button_b  { shift->send_command('SendKey('.$KEYS{ACTION_BUTTON_B}.')') }
+sub stop  { shift->send_command('SendKey('.$KEYS{ACTION_STOP}.')') }
+sub play  { shift->send_command('SendKey('.$KEYS{ACTION_PLAY}.')') }
+sub volume_up  { shift->send_command('SendKey('.$KEYS{ACTION_VOLUME_UP}.')') }
+sub volume_down  { shift->send_command('SendKey('.$KEYS{ACTION_VOLUME_DOWN}.')') }
+sub mute  { shift->send_command('SendKey('.$KEYS{ACTION_MUTE}.')') }
 
 sub start { shift->button_a }
 sub back  { shift->button_b }

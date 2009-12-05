@@ -32,7 +32,6 @@ h1 {
 div#remote {
     margin: auto;
     width: 450px;
-    border: 1px solid #444;
 }
 
 div.status {

@@ -10,7 +10,13 @@ $KEYS = {
     ACTION_START => 100,
     ACTION_BACK => 110,
     ACTION_BUTTON_A => 256,
-    ACTION_BUTTON_b => 257,
+    ACTION_BUTTON_B => 257,
+    ACTION_PLAY => 79,
+    ACTION_VOLUME_UP => 88,
+    ACTION_VOLUME_DOWN => 89,
+    ACTION_MUTE => 91,
+    ACTION_PAUSE => 12,
+    ACTION_STOP => 13,
 };
 sub keys { $KEYS }
 
