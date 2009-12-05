@@ -1,0 +1,14 @@
+Boxee Remote
+
+A remote controller webapp for Boxee
+
+
+This webapp can be installed on your host where Boxee is installed, or anywhere
+else on your local network.
+
+It asks you for a host/port pair and behaves as a remote controller.
+
+It is based on Boxee's iPhone remote controller.
+
+This is powered by Dancer.
+
