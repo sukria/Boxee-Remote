@@ -13,11 +13,10 @@ post '/action/:action' => sub {
     my $boxee = session('boxee');
     my $action = params->{action};
     $boxee->$action;
-};
-
-post '/action_code/:code' => sub {
-    my $boxee = session('boxee');
-    $boxee->action(params->{code});
+    template boxee_status => {
+        boxee => $boxee,
+        currently => $boxee->get_currently_playing,
+    }, { layout => false };
 };
 
 post '/connect' => sub { 

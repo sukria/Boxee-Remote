@@ -16,6 +16,9 @@ a {
 
 h1 { 
     color: #a5ec02;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 #footer {
@@ -26,7 +29,29 @@ h1 {
     color: #ddd;
 }
 
+div#remote {
+    margin: auto;
+    width: 450px;
+    border: 1px solid #444;
+}
+
+div.status {
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    font-family: monospace;
+    background-color: #111;
+    color: #bdd24b;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+
+div#boxee_status div {
+    margin-bottom: 2px;
+}
+
 pre {
-    font-family: \"lucida console\",\"monaco\",\"andale mono\",\"bitstream vera sans mono\",\"consolas\",monospace;
+    font-family: monospace;
 }
 

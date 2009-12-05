@@ -29,6 +29,7 @@ sub send_http_request {
     my $res = LWP::UserAgent->new->request($req);
 
     if ($res->is_success) {
+        Dancer::Logger->debug("==> ".$res->content);
         return $res->content;
     }
     else {

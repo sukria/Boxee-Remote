@@ -1,0 +1,8 @@
+<div id="boxee_status">
+    <div>
+        <% boxee.server %> (<% boxee.port %>)
+    </div>
+    <div>
+        <% currently.Filename %>
+    </div>
+</div>

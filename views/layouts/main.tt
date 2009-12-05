@@ -11,6 +11,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 </head>
 <body>
-<h1>BoxeeRemote</h1><div id="content"><p><% content %></p></div><div id="footer">Powered by <a href="http://dancer.sukria.net">Dancer</a></div>
+    <div id="content"><% content %></div>
 </body>
 </html>

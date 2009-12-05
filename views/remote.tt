@@ -1,7 +1,7 @@
 <script type="text/javascript">
 function send_action(action) {
 	$(action).src = '/images/'+action+'_highlight.png';
-	new Ajax.Request('/action/'+action, {
+	new Ajax.Updater('boxee_status', '/action/'+action, {
 		method: 'post',
 		onLoading: function() {
 			true;
@@ -23,36 +23,39 @@ Bind.bind('return', function() { send_action('start') } );
 
 </script>
 
-<div style="margin-bottom: 1em; font-size: 12px;">
-<div>
-    Host: <% session.boxee.server %>
-</div>
-<div>
-    Now playing: <% currently.Filename %>
-</div>
+<div id="remote">
+    <div class="control">
+        <h1>Boxee</h1>
+    </div>
+
+    <div class="control status">
+    <% include 'boxee_status.tt' %>
+    </div>
+
+    <div class="control">
+    <table border="0" align="center">
+        <tr>
+            <td></td>
+            <td><a href="#" onclick="send_action('up');return(false);"><img id="up" src="/images/up.png" border="0" /></a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="#" onclick="send_action('left');return(false);"><img id="left" src="/images/left.png" border="0" /></a></td>
+            <td><a href="#" onclick="send_action('start');return(false);"><img id="start" src="/images/start.png" border="0" /></a></td>
+            <td><a href="#" onclick="send_action('right');return(false);"><img id="right" src="/images/right.png" border="0" /></a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="#" onclick="send_action('down');return(false);"><img id="down" src="/images/down.png" border="0" /></a></td>
+            <td></td>
+        </tr>
+    </table>
+    </div>
+
+    <div class="control">
+    <a href="#" onclick="send_action('back'); return(false);"><span id="back">BACK</span></a>
+    </div>
+
 </div>
 
-<div>
-<table border="0">
-    <tr>
-        <td></td>
-        <td><a href="#" onclick="send_action('up');return(false);"><img id="up" src="/images/up.png" border="0" /></a></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="#" onclick="send_action('left');return(false);"><img id="left" src="/images/left.png" border="0" /></a></td>
-        <td><a href="#" onclick="send_action('start');return(false);"><img id="start" src="/images/start.png" border="0" /></a></td>
-        <td><a href="#" onclick="send_action('right');return(false);"><img id="right" src="/images/right.png" border="0" /></a></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><a href="#" onclick="send_action('down');return(false);"><img id="down" src="/images/down.png" border="0" /></a></td>
-        <td></td>
-    </tr>
-</table>
-</div>
 
-<a href="#" onclick="send_action('back'); return(false);"><span id="back">BACK</span></a>
-
-<br>
-TODO : PLAY/PAUSE VOLUME +/- 

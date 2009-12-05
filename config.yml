@@ -1,4 +1,5 @@
 layout: "main"
 logger: "file"
 session: "yaml"
+template: "template_toolkit"
 
