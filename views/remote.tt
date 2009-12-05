@@ -20,6 +20,7 @@ Bind.bind('left', function() { send_action('left') } );
 Bind.bind('right', function() { send_action('right') } );
 Bind.bind('backspace', function() { send_action('back') } );
 Bind.bind('return', function() { send_action('start') } );
+Bind.bind('space', function() { send_action('pause') });
 
 </script>
 
@@ -59,6 +60,8 @@ Bind.bind('return', function() { send_action('start') } );
     </table>
     </div>
 
+
+<img src="" style="dispaly: none;" id="pause" />
 
 </div>
 
